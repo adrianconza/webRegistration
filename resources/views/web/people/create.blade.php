@@ -5,7 +5,7 @@
     <h1>Registrarse</h1>
 
     <div>
-        <form action="{{ route('people.store') }}" method="POST">
+        <form action="{{ route('people.store') }}" method="POST" class="form">
             @csrf
 
             <label for="cedula">Cedula</label>
@@ -32,7 +32,9 @@
             <label for="position">Cargo</label>
             <input id="position" type="text" name="position" required placeholder="Ingrese su cargo">
 
-            <button type="submit">Guardar</button>
+            <button type="submit" class="btn btn-primary fa fa-floppy-o">
+                <span>Guardar</span>
+            </button>
         </form>
     </div>
 </div>

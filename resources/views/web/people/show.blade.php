@@ -2,26 +2,37 @@
 
 @section('content')
 <div>
-    <h1>Registrarse</h1>
+    <h1>Datos de persona</h1>
 
-    <div>
-        <span>Cedula: {{ $person->cedula }}</span>
+    <div class="form">
 
-        <span>Nombre: {{ $person->name }}</span>
+        <label for="cedula">Cedula</label>
+        <input id="cedula" type="text" name="cedula" value="{{ $person->cedula }}" readonly>
 
-        <span>Apellido: {{ $person->last_name }}</span>
+        <label for="name">Nombre</label>
+        <input id="name" type="text" name="name" value="{{ $person->name }}" readonly>
 
-        <span>Correo: {{ $person->email }}</span>
+        <label for="last-name">Apellido</label>
+        <input id="last-name" type="text" name="last_name" value="{{ $person->last_name }}" readonly>
 
-        <span>Telefono: {{ $person->phone }}</span>
+        <label for="email">Correo</label>
+        <input id="email" type="email" name="email" value="{{ $person->email }}" readonly>
 
-        <span>Fecha de nacimiento: {{ $person->birth_date }}</span>
+        <label for="phone">Telefono</label>
+        <input id="phone" type="tel" name="phone" value="{{ $person->phone }}" readonly>
 
-        <span>Direccion: {{ $person->address }}</span>
+        <label for="birth-date">Fecha de nacimiento</label>
+        <input id="birth-date" type="date" name="birth_date" value="{{ $person->birth_date }}" readonly >
 
-        <span>Cargo: {{ $person->position }}</span>
+        <label for="address">Direccion</label>
+        <input id="address" type="text" name="address" value="{{ $person->address }}" readonly>
 
-        <a href="{{ route('people.index') }}">Regresar</a>
+        <label for="position">Cargo</label>
+        <input id="position" type="text" name="position" value="{{ $person->position }}" readonly>
+
+        <a href="{{ route('people.index') }}"  class="btn btn-secondary fa fa-chevron-left">
+            <span>Regresar</span>
+        </a>
     </div>
 </div>
 @endsection

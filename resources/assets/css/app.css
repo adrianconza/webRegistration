@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 920px;
+    margin: auto;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-none {
+    display: none;
+}
+
+.nav {
+    padding: 1em;
+    height: 2em;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+.nav .brand {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nav .brand h2{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.nav .menu {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nav .login {
+    display: inline-block;
+    float: right;
+    margin: 0.5em 0 0 0;
+}
+
+.nav .login li {
+    display: inline-block;
+}
+
+.nav .login li:first-child {
+    margin-right: 0.5em;
+}
+
+.btn {
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.55em 0.60em;
+    border-radius: 0.30em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn span {
+    font-family: Roboto;
+}
+
+.btn:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color:#fff;
+    background-color:#0069d9;
+    border-color:#0062cc
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    color:#fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-danger {
+    color:#fff;
+    background-color:#dc3545;
+    border-color:#dc3545
+}
+
+.btn-danger:hover {
+    color:#fff;
+    background-color:#c82333;
+    border-color:#bd2130
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin: .75em;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table th, .table td{
+    padding: 0.75em;
+    border-top: 1px solid #dee2e6;
+}
+
+.table th{
+    border-top: 1px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td:first-child{
+    font-weight: bold;
+}
+
+.table th:last-child, .table td:last-child{
+    text-align: center;
+    width: 9em;
+}
+
+.table tbody tr:nth-child(odd){
+    background-color: rgba(0,0,0,.05);
+}
+
+.form {
+    width: 100%;
+    max-width: 100%;
+    margin: .75em;
+    text-align: left;
+}
+
+.form label, .form input {
+    display: block;
+    margin-bottom: 0.30em;
+}
+
+.form input {
+    margin-bottom: 0.60em;
+    width: 50%;
+    border: 1px solid #ced4da;
+    border-radius: 0.30em;
+    padding: 0.55em 0.60em;
+}
+
+.form input:focus {
+    outline: 0;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.form input[readonly] {
+    background-color: #e9ecef;
+}
+
+.form button, .form a {
+    margin-top: 1em;
+}

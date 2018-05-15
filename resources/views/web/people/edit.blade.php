@@ -2,10 +2,10 @@
 
 @section('content')
 <div>
-    <h1>Registrarse</h1>
+    <h1>Editar persona</h1>
 
     <div>
-        <form action="{{ route('people.update', $person->id) }}" method="POST">
+        <form action="{{ route('people.update', $person->id) }}" method="POST" class="form">
             @method('PUT')
             @csrf
 
@@ -33,8 +33,12 @@
             <label for="position">Cargo</label>
             <input id="position" type="text" name="position" value="{{ $person->position }}" required placeholder="Ingrese su cargo">
 
-            <button type="submit">Guardar</button>
-            <a href="{{ route('people.index') }}">Regresar</a>
+            <button type="submit" class="btn btn-primary fa fa-floppy-o">
+                <span>Guardar</span>
+            </button>
+            <a href="{{ route('people.index') }}" class="btn btn-secondary fa fa-chevron-left">
+                <span>Cancelar</span>
+            </a>
         </form>
     </div>
 </div>
