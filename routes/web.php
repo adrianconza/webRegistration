@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'person');
+
+Auth::routes();
+
+Route::resource('people', 'PersonController');
