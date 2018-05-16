@@ -11,9 +11,13 @@
 |
 */
 
-Route::redirect('/', 'people');
+Route::redirect('/', '/people/create');
+Route::get('/people/create', 'PersonController@create');
+Route::post('/people/store', 'PersonController@store');
 
 Auth::routes();
 
-Route::resource('people', 'PersonController');
-Route::resource('workshops', 'WorkshopController');
+Route::middleware('auth')->group(function () {
+    Route::resource('people', 'PersonController');
+    Route::resource('workshops', 'WorkshopController');
+});

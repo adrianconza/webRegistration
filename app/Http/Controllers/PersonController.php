@@ -25,9 +25,11 @@ class PersonController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('web.people.create');
+        $from = $request->input('from');
+        return view('web.people.create')
+            ->with('from', $from == null ? 1 : $from);
     }
 
     /**

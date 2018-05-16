@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-    <h1>Registrarse</h1>
+    <h1>{{ $from == 1 ? 'Registrarse' : 'Añadir persona' }}</h1>
 
     <div>
         <form action="{{ route('people.store') }}" method="POST" class="form">
@@ -35,6 +35,12 @@
             <button type="submit" class="btn btn-primary fa fa-floppy-o">
                 <span>Guardar</span>
             </button>
+
+            @if ($from != 1)
+                <a href="{{ route('people.index') }}" class="btn btn-secondary fa fa-chevron-left">
+                    <span>Cancelar</span>
+                </a>
+            @endif
         </form>
     </div>
 </div>

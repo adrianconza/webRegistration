@@ -5,7 +5,7 @@
     <h1>Personas Registradas</h1>
 
     <div>
-        <a href="{{ route('people.create') }}" class="btn btn-primary fa fa-plus">
+        <a href="{{ route('people.create', ['from' => 'new']) }}" class="btn btn-primary fa fa-plus">
             <span>Crear</span>
         </a>
         <table class="table">
