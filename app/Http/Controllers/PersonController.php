@@ -41,6 +41,8 @@ class PersonController extends Controller
     public function store(Request $request)
     {
         $person = Person::create($request->all());
+        if($request->from == 1)
+            return redirect()->route('people.create');
         return redirect()->route('people.index');
     }
 

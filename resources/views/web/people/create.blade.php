@@ -7,6 +7,7 @@
     <div>
         <form action="{{ route('people.store') }}" method="POST" class="form">
             @csrf
+            <input id="from" type="hidden" name="from" value="{{ $from }}">
 
             <label for="cedula">Cedula</label>
             <input id="cedula" type="text" name="cedula" required placeholder="Ingrese su cedula">
