@@ -15,13 +15,13 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cedula', 10);
+            $table->string('cedula', 13);
             $table->string('name', 100);
             $table->string('last_name', 100);
             $table->string('email', 50);
             $table->date('birth_date');
             $table->string('address', 150);
-            $table->string('phone', 10);
+            $table->string('phone', 15);
             $table->string('position', 80);
             $table->timestamps();
         });

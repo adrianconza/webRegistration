@@ -38,6 +38,9 @@ class WorkshopController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'duration' => 'bail|alpha_num|min:5|max:60|numeric'
+        ]);
         $workshop = Workshop::create($request->all());
         return redirect()->route('workshops.index');
     }
@@ -77,6 +80,9 @@ class WorkshopController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'duration' => 'bail|alpha_num|min:5|max:60|numeric'
+        ]);
         $workshop = Workshop::find($id);
         $workshop->fill($request->all())->save();
         return redirect()->route('workshops.index');

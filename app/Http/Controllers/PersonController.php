@@ -43,6 +43,12 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'cedula' => 'bail|alpha_num|digits_between:10,13|numeric|is_valid_cedula',
+            'phone' => 'bail|digits_between:6,16|numeric',
+            'birth_date' => 'bail|after:"1900-01-01"|before:"2017-12-31"|date',
+            'workshops' => 'bail|array|required',
+        ]);
         $person = Person::create($request->all());
         $person->workshops()->attach($request->workshops);
         if($request->from == 1)
@@ -85,6 +91,12 @@ class PersonController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'cedula' => 'bail|alpha_num|digits_between:10,13|numeric|is_valid_cedula',
+            'phone' => 'bail|digits_between:6,16|numeric',
+            'birth_date' => 'bail|after:"1900-01-01"|before:"2017-12-31"|date',
+            'workshops' => 'bail|array|required',
+        ]);
         $person = Person::find($id);
         $person->fill($request->all())->save();
         return redirect()->route('people.index');

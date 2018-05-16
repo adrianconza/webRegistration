@@ -9,8 +9,13 @@
             @method('PUT')
             @csrf
 
-            <label for="cedula">Cedula</label>
-            <input id="cedula" type="text" name="cedula" value="{{ $person->cedula }}" required placeholder="Ingrese su cedula" autofocus>
+            <label for="cedula">Cédula</label>
+            <input id="cedula" type="text" name="cedula" value="{{ $person->cedula }}" required placeholder="Ingrese su cédula" autofocus>
+            @if ($errors->has('cedula'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('cedula') }}</strong>
+                </div>
+            @endif
 
             <label for="name">Nombre</label>
             <input id="name" type="text" name="name" value="{{ $person->name }}" required placeholder="Ingrese su nombre">
@@ -21,14 +26,24 @@
             <label for="email">Correo</label>
             <input id="email" type="email" name="email" value="{{ $person->email }}" required placeholder="Ingrese su correo">
 
-            <label for="phone">Telefono</label>
-            <input id="phone" type="tel" name="phone" value="{{ $person->phone }}" required placeholder="Ingrese su telefono">
+            <label for="phone">Teléfono</label>
+            <input id="phone" type="tel" name="phone" value="{{ $person->phone }}" required placeholder="Ingrese su teléfono">
+            @if ($errors->has('phone'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('phone') }}</strong>
+                </div>
+            @endif
 
             <label for="birth-date">Fecha de nacimiento</label>
             <input id="birth-date" type="date" name="birth_date" value="{{ $person->birth_date }}" required>
+            @if ($errors->has('birth_date'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('birth_date') }}</strong>
+                </div>
+            @endif
 
-            <label for="address">Direccion</label>
-            <input id="address" type="text" name="address" value="{{ $person->address }}" required placeholder="Ingrese su direccion">
+            <label for="address">Dirección</label>
+            <input id="address" type="text" name="address" value="{{ $person->address }}" required placeholder="Ingrese su dirección">
 
             <label for="position">Cargo</label>
             <input id="position" type="text" name="position" value="{{ $person->position }}" required placeholder="Ingrese su cargo">

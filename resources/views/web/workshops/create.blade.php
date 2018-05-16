@@ -9,10 +9,15 @@
             @csrf
 
             <label for="name">Nombre</label>
-            <input id="name" type="text" name="name" required placeholder="Ingrese el nombre" autofocus>
+            <input id="name" type="text" name="name" required placeholder="Ingrese el nombre" autofocus value="{{ old('name') }}">
 
-            <label for="duration">Duracion</label>
-            <input id="duration" type="number" name="duration" required placeholder="Ingrese la duracion en minutos">
+            <label for="duration">Duración</label>
+            <input id="duration" type="number" name="duration" required placeholder="Ingrese la duración en minutos" value="{{ old('duration') }}">
+            @if ($errors->has('duration'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('duration') }}</strong>
+                </div>
+            @endif
 
             <button type="submit" class="btn btn-primary fa fa-floppy-o">
                 <span>Guardar</span>

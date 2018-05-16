@@ -35,7 +35,7 @@
             <label for="password-confirm">Confirmar contraseña</label>
             <input id="password-confirm" type="password" name="password_confirmation" required>
 
-            <button type="submit" class="btn btn-primary fa fa-floppy-o">
+            <button type="submit" class="btn btn-primary">
                 <span>Registrarse</span>
             </button>
         </form>

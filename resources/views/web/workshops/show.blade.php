@@ -9,7 +9,7 @@
         <label for="name">Nombre</label>
         <input id="name" type="text" name="name" value="{{ $workshop->name }}" readonly>
 
-        <label for="duration">Duracion</label>
+        <label for="duration">Duración</label>
         <input id="duration" type="text" name="duration" value="{{ $workshop->duration }} min" readonly>
 
         <label for="active">Activo</label>

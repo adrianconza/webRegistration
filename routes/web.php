@@ -11,7 +11,7 @@
 |
 */
 
-Route::redirect('/', 'people.create');
+Route::redirect('/', '/people/create');
 Route::get('/people/create', 'PersonController@create')
     ->name('people.create');
 Route::post('/people/store', 'PersonController@store')

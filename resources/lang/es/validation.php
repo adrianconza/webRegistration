@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'is_valid_cedula'      => 'El campo :attribute debe ser una cédula valida.',
     'accepted'             => 'El campo :attribute debe ser aceptado.',
     'active_url'           => 'El campo :attribute no es una URL válida.',
     'after'                => 'El campo :attribute debe ser una fecha posterior a :date.',

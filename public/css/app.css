@@ -556,6 +556,11 @@ a:hover {
     margin-top: 1em;
 }
 
+.form .invalid-feedback {
+    color: #dc3545;
+    margin-bottom: 1em;
+}
+
 .dialog-destroy > span{
     padding: 0.75em;
     float: left;

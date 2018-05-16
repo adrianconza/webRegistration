@@ -6,7 +6,7 @@
 
     <div class="form">
 
-        <label for="cedula">Cedula</label>
+        <label for="cedula">Cédula</label>
         <input id="cedula" type="text" name="cedula" value="{{ $person->cedula }}" readonly>
 
         <label for="name">Nombre</label>
@@ -18,18 +18,19 @@
         <label for="email">Correo</label>
         <input id="email" type="email" name="email" value="{{ $person->email }}" readonly>
 
-        <label for="phone">Telefono</label>
+        <label for="phone">Teléfono</label>
         <input id="phone" type="tel" name="phone" value="{{ $person->phone }}" readonly>
 
         <label for="birth-date">Fecha de nacimiento</label>
         <input id="birth-date" type="date" name="birth_date" value="{{ $person->birth_date }}" readonly >
 
-        <label for="address">Direccion</label>
+        <label for="address">Dirección</label>
         <input id="address" type="text" name="address" value="{{ $person->address }}" readonly>
 
         <label for="position">Cargo</label>
         <input id="position" type="text" name="position" value="{{ $person->position }}" readonly>
 
+        <label for="workshops">Talleres</label>
         <select id="workshops" multiple name="workshops[]" disabled>
             @foreach($person->workshops as $workshop)
                 <option value="{{ $workshop->id }}">Nombre: {{ $workshop->name }}, Duración: {{ $workshop->duration }}min</option>

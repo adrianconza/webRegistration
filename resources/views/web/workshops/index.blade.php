@@ -13,7 +13,7 @@
                 <tr>
                     <th>#</th>
                     <th>Nombre</th>
-                    <th>Duracion</th>
+                    <th>Duración</th>
                     <th>Activo</th>
                     <th>Acciones</th>
                 </tr>
@@ -38,7 +38,7 @@
                         </td>
                         <td colspan="6" class="display-none">
                             <div class="dialog-destroy">
-                                <span>Esta seguro que desea {{ $workshop->active ? 'desactivar' : 'activar' }} el taller de {{ $workshop->name }}</span>
+                                <span>Está seguro que desea {{ $workshop->active ? 'desactivar' : 'activar' }} el taller de {{ $workshop->name }}</span>
                                 <div class="dialog-destroy-btn">
                                     <form action="{{ route('workshops.destroy', $workshop->id) }}" method="POST" class="display-inline-block">
                                         @method('DELETE')

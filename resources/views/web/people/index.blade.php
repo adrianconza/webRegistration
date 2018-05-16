@@ -13,9 +13,9 @@
                 <tr>
                     <th>#</th>
                     <th>Nombre</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th>Correo</th>
-                    <th>Direccion</th>
+                    <th>Dirección</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -34,7 +34,7 @@
                         </td>
                         <td colspan="6" class="display-none">
                             <div class="dialog-destroy">
-                                <span>Esta seguro de eliminar a {{ $person->name }} {{ $person->last_name }}</span>
+                                <span>Está seguro de eliminar a {{ $person->name }} {{ $person->last_name }}</span>
                                 <div class="dialog-destroy-btn">
                                     <form action="{{ route('people.destroy', $person->id) }}" method="POST" class="display-inline-block">
                                         @method('DELETE')
