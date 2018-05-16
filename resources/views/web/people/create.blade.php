@@ -10,7 +10,7 @@
             <input id="from" type="hidden" name="from" value="{{ $from }}">
 
             <label for="cedula">Cedula</label>
-            <input id="cedula" type="text" name="cedula" required placeholder="Ingrese su cedula">
+            <input id="cedula" type="text" name="cedula" required placeholder="Ingrese su cedula" autofocus>
 
             <label for="name">Nombre</label>
             <input id="name" type="text" name="name" required placeholder="Ingrese su nombre">
@@ -32,6 +32,13 @@
 
             <label for="position">Cargo</label>
             <input id="position" type="text" name="position" required placeholder="Ingrese su cargo">
+
+            <label for="workshops">Talleres</label>
+            <select id="workshops" multiple name="workshops[]">
+                @foreach($workshops as $workshop)
+                    <option value="{{ $workshop->id }}">Nombre: {{ $workshop->name }}, Duración: {{ $workshop->duration }}min</option>
+                @endforeach
+            </select>
 
             <button type="submit" class="btn btn-primary fa fa-floppy-o">
                 <span>Guardar</span>

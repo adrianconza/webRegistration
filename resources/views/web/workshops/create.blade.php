@@ -9,7 +9,7 @@
             @csrf
 
             <label for="name">Nombre</label>
-            <input id="name" type="text" name="name" required placeholder="Ingrese el nombre">
+            <input id="name" type="text" name="name" required placeholder="Ingrese el nombre" autofocus>
 
             <label for="duration">Duracion</label>
             <input id="duration" type="number" name="duration" required placeholder="Ingrese la duracion en minutos">

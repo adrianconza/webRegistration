@@ -10,7 +10,7 @@
             @csrf
 
             <label for="cedula">Cedula</label>
-            <input id="cedula" type="text" name="cedula" value="{{ $person->cedula }}" required placeholder="Ingrese su cedula">
+            <input id="cedula" type="text" name="cedula" value="{{ $person->cedula }}" required placeholder="Ingrese su cedula" autofocus>
 
             <label for="name">Nombre</label>
             <input id="name" type="text" name="name" value="{{ $person->name }}" required placeholder="Ingrese su nombre">

@@ -34,7 +34,7 @@
                         <td>
                             <a href="{{ route('workshops.show', $workshop->id) }}" class="btn btn-primary fa fa-external-link" title="Mostrar"></a>
                             <a href="{{ route('workshops.edit', $workshop->id) }}" class="btn btn-primary fa fa-pencil" title="Editar"></a>
-                            <button class="btn btn-{{ $workshop->active ? 'danger' : 'primary' }} fa fa-{{ $workshop->active ? 'trash' : 'check' }}" title="Eliminar" onclick="showDialogDestroy('person-'+{{ $workshop->id }})"/>
+                            <button class="btn btn-{{ $workshop->active ? 'danger' : 'primary' }} fa fa-{{ $workshop->active ? 'trash' : 'check' }}" title="{{ $workshop->active ? 'Desactivar' : 'Activar' }}" onclick="showDialogDestroy('person-'+{{ $workshop->id }})"/>
                         </td>
                         <td colspan="6" class="display-none">
                             <div class="dialog-destroy">

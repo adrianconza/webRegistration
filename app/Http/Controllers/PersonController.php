@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Person;
+use App\Workshop;
 
 class PersonController extends Controller
 {
@@ -28,7 +29,9 @@ class PersonController extends Controller
     public function create(Request $request)
     {
         $from = $request->input('from');
+        $workshops = Workshop::where('active', true)->get();
         return view('web.people.create')
+            ->with('workshops', $workshops)
             ->with('from', $from == null ? 1 : $from);
     }
 
@@ -41,6 +44,7 @@ class PersonController extends Controller
     public function store(Request $request)
     {
         $person = Person::create($request->all());
+        $person->workshops()->attach($request->workshops);
         if($request->from == 1)
             return redirect()->route('people.create');
         return redirect()->route('people.index');

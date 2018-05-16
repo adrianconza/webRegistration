@@ -16,4 +16,9 @@ class Person extends Model
         'phone',
         'position',
     ];
+
+    public function workshops()
+    {
+        return $this->belongsToMany('App\Workshop');
+    }
 }

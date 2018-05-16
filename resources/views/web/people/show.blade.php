@@ -30,6 +30,12 @@
         <label for="position">Cargo</label>
         <input id="position" type="text" name="position" value="{{ $person->position }}" readonly>
 
+        <select id="workshops" multiple name="workshops[]" disabled>
+            @foreach($person->workshops as $workshop)
+                <option value="{{ $workshop->id }}">Nombre: {{ $workshop->name }}, Duración: {{ $workshop->duration }}min</option>
+            @endforeach
+        </select>
+
         <a href="{{ route('people.index') }}"  class="btn btn-secondary fa fa-chevron-left">
             <span>Regresar</span>
         </a>

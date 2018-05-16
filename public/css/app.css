@@ -519,17 +519,21 @@ a:hover {
     text-align: left;
 }
 
-.form label, .form input {
+.form label, .form input, .form select{
     display: block;
     margin-bottom: 0.30em;
 }
 
-.form input:not([type="checkbox"]) {
+.form input:not([type="checkbox"]), .form select {
     margin-bottom: 0.60em;
     width: 50%;
     border: 1px solid #ced4da;
     border-radius: 0.30em;
     padding: 0.55em 0.60em;
+}
+
+.form select {
+    width: 52%;
 }
 
 .form input[type="checkbox"]{
@@ -538,13 +542,13 @@ a:hover {
     height: 1em;
 }
 
-.form input:focus {
+.form input:focus, .form select:focus {
     outline: 0;
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-.form input[readonly], .form input[disabled] {
+.form input[readonly], .form input[disabled], .form select[disabled] {
     background-color: #e9ecef;
 }
 

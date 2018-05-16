@@ -10,7 +10,7 @@
             @csrf
 
             <label for="name">Nombre</label>
-            <input id="name" type="text" name="name" value="{{ $workshop->name }}" required placeholder="Ingrese el nombre">
+            <input id="name" type="text" name="name" value="{{ $workshop->name }}" required placeholder="Ingrese el nombre" autofocus>
 
             <label for="duration">Duracion</label>
             <input id="duration" type="number" name="duration" value="{{ $workshop->duration }}" required placeholder="Ingrese la duracion en minutos">
