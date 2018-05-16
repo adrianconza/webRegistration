@@ -387,6 +387,16 @@ a:hover {
 .nav .menu {
     display: inline-block;
     vertical-align: top;
+    margin: 0.5em 0 0 0;
+    padding-left: 4em;
+}
+
+.nav .menu li {
+    display: inline-block;
+}
+
+.nav .menu li:first-child {
+    margin-right: 0.5em;
 }
 
 .nav .login {
@@ -484,13 +494,22 @@ a:hover {
     font-weight: bold;
 }
 
-.table th:last-child, .table td:last-child{
+.table th:last-child, .table td:nth-last-child(2) {
     text-align: center;
     width: 9em;
 }
 
 .table tbody tr:nth-child(odd){
     background-color: rgba(0,0,0,.05);
+}
+
+.table td input[type="checkbox"]{
+    width: 1em;
+    height: 1em;
+}
+
+.table td input[readonly], .table td input[disabled] {
+    background-color: #e9ecef;
 }
 
 .form {
@@ -505,12 +524,18 @@ a:hover {
     margin-bottom: 0.30em;
 }
 
-.form input {
+.form input:not([type="checkbox"]) {
     margin-bottom: 0.60em;
     width: 50%;
     border: 1px solid #ced4da;
     border-radius: 0.30em;
     padding: 0.55em 0.60em;
+}
+
+.form input[type="checkbox"]{
+    margin-bottom: 0.60em;
+    width: 1em;
+    height: 1em;
 }
 
 .form input:focus {
@@ -519,10 +544,22 @@ a:hover {
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-.form input[readonly] {
+.form input[readonly], .form input[disabled] {
     background-color: #e9ecef;
 }
 
 .form button, .form a {
     margin-top: 1em;
+}
+
+.dialog-destroy > span{
+    padding: 0.75em;
+    float: left;
+}
+
+.dialog-destroy .dialog-destroy-btn {
+    float: right;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }

@@ -17,7 +17,7 @@ class CreateWorkshopsTable extends Migration
             $table->increments('id');
             $table->string('name', 250);
             $table->integer('duration');
-            $table->boolean('active');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

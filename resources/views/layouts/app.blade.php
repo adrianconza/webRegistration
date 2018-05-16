@@ -29,31 +29,30 @@
             </a>
 
             <ul class="menu">
-
+                @auth
+                    <li><a href="{{ route('people.index') }}">Personas</a></li>
+                    <li><a href="{{ route('workshops.index') }}">Talleres</a></li>
+                @endauth
             </ul>
 
             <ul class="login">
                 <!-- Authentication Links -->
                 @guest
                     <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                    <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
                 @else
                     <li>
-                        <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span></span>
+                        <a href="{{ url('/') }}">{{ Auth::user()->name }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
                         </a>
 
-                        <div aria-labelledby="navbarDropdown">
-                            <a href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="display-none">
+                            @csrf
+                        </form>
                     </li>
                 @endguest
             </ul>

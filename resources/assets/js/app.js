@@ -2,5 +2,6 @@ import $ from 'jquery'
 
 window.showDialogDestroy = (id) => {
     let $row = $('#' + id)
-    console.log($row)
+    $row.children().toggle(0)
+    return false
 }

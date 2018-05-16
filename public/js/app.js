@@ -82,7 +82,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 window.showDialogDestroy = function (id) {
     var $row = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#' + id);
-    console.log($row);
+    $row.children().toggle(0);
+    return false;
 };
 
 /***/ }),
