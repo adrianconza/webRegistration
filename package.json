@@ -12,6 +12,6 @@
     "devDependencies": {
         "cross-env": "^5.1",
         "laravel-mix": "^2.0",
-        "lodash": "^4.17.4"
+        "lodash": "^4.17.21"
     }
 }
